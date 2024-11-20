@@ -1,0 +1,402 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(45deg, #0a0a0a, #2a2a2a);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.ticker-container {
+    background-color: #000;
+    padding: 10px;
+}
+
+.stock-ticker {
+    color: #39FF14;
+    font-size: 18px;
+    font-family: 'Bank Gothic', sans-serif;
+}
+
+.neon-text {
+    color: #39FF14; /* Neon green */
+    text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14;
+    font-family: 'Bank Gothic', sans-serif;
+    font-size: 3em;
+}
+
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(45deg, #003366, #000000);
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.neon-btn {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background: none;
+    border: 2px solid #39FF14;
+    color: #39FF14;
+    font-family: 'Bank Gothic', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+    background: #39FF14;
+    color: #000000;
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+}
+
+footer {
+    padding: 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+footer a {
+    color: #39FF14;
+    text-decoration: none;
+    margin: 10px;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Image Section */
+.image-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.image-section h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Dance Party Section */
+.dance-party {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10; /* Make sure it stays on top */
+}
+
+.dance-party h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.dance-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: danceAnimation 1s ease-in-out infinite alternate;
+}
+
+.dancing-dog {
+    width: 300px;  /* Adjust based on your GIF size */
+    height: auto;
+    animation: bounce 0.8s ease-in-out infinite;
+}
+
+@keyframes danceAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+.about {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.neon-text {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+}
+
+/* Button */
+.neon-btn {
+    padding: 15px 25px;
+    background-color: #ff00ff;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.neon-btn:hover {
+    background-color: #ff0080;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* NFT Section Styles */
+.nft-section {
+    background-color: #111; /* Dark background */
+    padding: 50px;
+    text-align: center;
+    border-top: 3px solid #00ff00;
+    border-bottom: 3px solid #00ff00;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.nft-card {
+    background-color: #000;
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.nft-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.nft-caption {
+    font-family: 'Press Start 2P', cursive;
+    color: #ff00ff;
+    font-size: 14px;
+    margin: 0;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+.nft-section h2 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    margin-bottom: 10px;
+}
+
+.nft-section p {
+    font-size: 1rem;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+    10% {
+        transform: translate(-3px, 3px);
+        clip-path: inset(10% 0 80% 0);
+    }
+    20% {
+        transform: translate(3px, -3px);
+        clip-path: inset(0 5% 90% 5%);
+    }
+    30% {
+        transform: translate(-2px, 2px);
+        clip-path: inset(15% 10% 70% 5%);
+    }
+    40% {
+        transform: translate(2px, -2px);
+        clip-path: inset(5% 0 60% 10%);
+    }
+    50% {
+        transform: translate(0);
+        opacity: 0.8;
+        clip-path: inset(0 5% 90% 5%);
+    }
+    60% {
+        transform: translate(3px, 3px);
+        clip-path: inset(20% 5% 50% 0);
+    }
+    70% {
+        transform: translate(-3px, -3px);
+        clip-path: inset(0 0 85% 5%);
+    }
+    80% {
+        transform: translate(2px, 2px);
+        clip-path: inset(10% 5% 80% 0);
+    }
+    90% {
+        transform: translate(-2px, -2px);
+        clip-path: inset(5% 10% 75% 0);
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.nft-card {
+    animation: glitch 1s infinite;
+    background-color: #000;
+    color: #ff00ff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links li {
+    display: inline;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #f39c12; /* Highlight color on hover */
+}
+
+.social-links i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.dex-screener {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.dex-screener h2 {
+    font-size: 2rem;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
+    margin-bottom: 20px;
+}
+
+.dex-placeholder {
+    border: 3px dashed #f39c12;
+    padding: 40px;
+    color: white;
+    background: #222;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px #f39c12, 0 0 20px #ff6347;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.dex-placeholder p {
+    margin: 0;
+    animation: flicker 2s infinite;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 
+            0 0 4px #f39c12,
+            0 0 11px #ff6347,
+            0 0 19px #ff4500,
+            0 0 40px #ff4500;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* For the title */
+.title {
+    font-size: 4rem;  /* Increase the font size */
+    font-family: 'Bank Gothic', sans-serif; /* Use a more impactful font */
+    font-weight: bold; /* Make it bold for emphasis */
+    text-align: center; /* Center-align the title */
+    color: #ffcc00; /* Add a bright color for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add a glowing text effect */
+    margin-top: 20px; /* Add some space above */
+    margin-bottom: 20px; /* Add some space below */
+}
+
