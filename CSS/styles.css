@@ -251,7 +251,7 @@ footer a:hover {
     display: inline-block;
     white-space: nowrap;
     font-weight: bold;
-    animation: scrollText 10s linear infinite;
+    animation: scrollText 30s linear infinite;  /* Slowed down the animation speed */
 }
 
 @keyframes scrollText {
