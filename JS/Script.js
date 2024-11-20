@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let price = 100;
     
     setInterval(() => {
-        price = (Math.random() * 200).toFixed(2); // Randomize the price
+        price += 10; // Increment price by 10 every interval
         ticker.textContent = `🚀 Meme Coin Price: $${price} | Join the revolution! | 🚀`;
-    }, 100); // Update price every 5 seconds
+    }, 100); // Update price every 100 milliseconds (this makes it go up quickly)
 });
