@@ -21,16 +21,25 @@
 </audio>
 
     <!-- Header Section -->
-    <header>
-        <div class="ticker-container">
-            <marquee class="stock-ticker">🚀 | Join the revolution! | 🚀</marquee>
-        </div>
-        <h1 class="neon-text title">Pupper Pump Pup</h1>
-        <p class="neon-text">Mr. Pup Pump started as a humble office pup but became the world’s top financial ‘bark’itect.</p>
-        <div class="hero-image">
-            <img src="Assets/images/Images/9ayi54.gif" alt="Puppy image" /> <!-- Ensure 'assets/images/IMG_3500.jpeg' exists -->
-        </div>
-    </header>
+<div class="ticker-container">
+    <p class="stock-ticker">🚀 | Join the revolution! | 🚀</p>
+</div>
+<style>
+    .ticker-container {
+        width: 100%;
+        overflow: hidden;
+    }
+    .stock-ticker {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scrollText 10s linear infinite;
+    }
+    @keyframes scrollText {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+</style>
+
 
     <!-- Social Media Section -->
     <footer>
