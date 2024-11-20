@@ -8,5 +8,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => {
         price = (Math.random() * 200).toFixed(2); // Randomize the price
         ticker.textContent = `🚀 Meme Coin Price: $${price} | Join the revolution! | 🚀`;
-    }, 5000); // Update price every 5 seconds
+    }, 100); // Update price every 5 seconds
 });
