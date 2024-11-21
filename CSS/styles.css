@@ -226,3 +226,13 @@ button:active {
         bottom: initial;
     }
 }
+
+/* Puppy Image Styling */
+.puppy-img {
+    width: 100%;
+    max-width: 350px; /* Adjust width as per your preference */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for the image */
+}
