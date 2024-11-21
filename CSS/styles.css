@@ -77,7 +77,7 @@ body {
     box-shadow: inset -1px -1px 0 #000, inset 1px 1px 0 #ffffff;
 }
 
-/* Social Links */
+/* Social Links Section */
 .social-links {
     list-style: none;
     display: flex;
@@ -86,17 +86,34 @@ body {
     margin-top: 30px;
 }
 
+/* Social Link Style */
 .social-links a {
-    color: #39FF14;
-    text-decoration: none;
+    font-family: 'Courier New', monospace; /* Retro font */
     font-size: 16px;
-    font-family: 'Courier New', monospace;
+    text-decoration: none;
+    color: #000080; /* Classic Windows blue */
+    padding: 4px 8px;
+    border: 2px solid #808080; /* 3D button look */
+    background-color: #c0c0c0; /* Light gray background */
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 #808080, -2px -2px 0 #ffffff; /* 3D effect */
+    transition: all 0.3s ease; /* Smooth transition on hover */
 }
 
+/* Hover Effect for Social Links */
 .social-links a:hover {
-    color: #ffffff;
-    text-decoration: underline;
+    color: #ffffff; /* White text on hover */
+    background-color: #000080; /* Windows blue background */
+    border-color: #ffffff; /* White border on hover */
+    box-shadow: 2px 2px 0 #000000, -2px -2px 0 #c0c0c0; /* Reverse 3D effect on hover */
 }
+
+/* Add icon size adjustment if needed */
+.social-links i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
 
 /* Footer */
 footer {
