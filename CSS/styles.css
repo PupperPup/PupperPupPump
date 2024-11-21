@@ -17,15 +17,26 @@ header {
 }
 
 .ticker-container {
-    background-color: #000;
+    width: 100%;
+    overflow: hidden; /* Hides text outside the visible area */
+    background-color: #000; /* Ticker background color */
     padding: 10px;
 }
 
 .stock-ticker {
-    color: #39FF14;
-    font-size: 18px;
+    display: inline-block;
+    white-space: nowrap;
+    color: #39FF14; /* Neon green text */
     font-family: 'Bank Gothic', sans-serif;
+    font-size: 18px;
+    animation: scrollText 20s linear infinite; /* Adjust speed here (20s is slower) */
 }
+
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
 
 .neon-text {
     color: #39FF14; /* Neon green */
