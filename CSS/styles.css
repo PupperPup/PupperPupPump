@@ -135,17 +135,19 @@ body {
 /* Social Links Styling */
 .social-links {
     display: flex; /* Arrange links in a row */
-    justify-content: center; /* Center links horizontally */
-    gap: 15px; /* Add space between links */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: flex-start; /* Align items to the start (no unnecessary stretching) */
+    gap: 15px; /* Space between links */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     padding: 10px 0;
-    margin-top: 15px;
+    margin: 0 auto; /* Center align the section */
+    max-width: 300px; /* Limit the total width of the social links container */
+    text-align: center;
 }
 
 .social-links a {
-    display: flex; /* Align icon and text horizontally */
-    align-items: center;
-    justify-content: center; /* Center content in the button */
+    display: inline-flex; /* Prevent stretching of buttons */
+    align-items: center; /* Center-align icon and text vertically */
+    justify-content: center; /* Center-align icon and text horizontally */
     text-decoration: none;
     background-color: #c0c0c0; /* Windows 95 button color */
     border: 2px solid #808080;
@@ -156,9 +158,8 @@ body {
     border-radius: 4px;
     box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #fff;
     transition: background-color 0.3s ease;
-    width: 90px; /* Ensure consistent button width */
+    width: auto; /* Keep width auto unless adjusted for mobile */
     height: 40px; /* Consistent button height */
-    overflow: hidden; /* Prevent content overflow */
 }
 
 .social-links a:hover {
@@ -171,20 +172,32 @@ body {
     font-size: 18px;
 }
 
-/* Mobile Styling */
+/* Responsive Design */
 @media (max-width: 768px) {
+    .social-links {
+        justify-content: center; /* Center-align for smaller screens */
+    }
+
     .social-links a {
-        width: 40px; /* Reduce width for smaller screens */
-        height: 40px; /* Ensure square buttons */
-        padding: 0; /* Remove extra padding */
-        justify-content: center; /* Center the icons */
+        width: 40px; /* Smaller square size for icons */
+        height: 40px;
+        padding: 0;
     }
 
     .social-links a span {
-        display: none; /* Hide text on smaller screens */
+        display: none; /* Hide text */
     }
 
     .social-links i {
-        margin-right: 0; /* Remove extra space around the icons */
+        margin-right: 0; /* No space for icons-only layout */
     }
 }
+
+/* Fix for Other Boxes Stretching */
+.window-body {
+    padding: 10px;
+    max-width: 400px; /* Limit width */
+    margin: 0 auto; /* Center align the content */
+    text-align: left; /* Align text */
+}
+
