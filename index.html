@@ -46,76 +46,22 @@
         </div>
     </header>
 
-    /* Social Links Section */
-    .social-links {
-        list-style: none;
-        display: flex;
-        justify-content: center;  /* Center the links */
-        gap: 20px;
-        margin-top: 30px;
-        flex-wrap: wrap; /* Allow wrapping on smaller screens */
-        padding: 0;  /* Ensure no extra padding or margin */
-        text-align: center;  /* Ensure text is centered */
-    }
-    
-    /* Social Link Style */
-    .social-links a {
-        font-family: 'Courier New', monospace; /* Retro font */
-        font-size: 16px;
-        text-decoration: none;
-        color: #000080; /* Classic Windows blue */
-        padding: 4px 8px;
-        border: 2px solid #808080; /* 3D button look */
-        background-color: #c0c0c0; /* Light gray background */
-        border-radius: 5px;
-        box-shadow: 2px 2px 0 #808080, -2px -2px 0 #ffffff; /* 3D effect */
-        transition: all 0.3s ease; /* Smooth transition on hover */
-        display: flex;  /* Ensure both icon and text are aligned */
-        align-items: center;
-    }
-    
-    /* Mobile-Specific Adjustments */
-    @media screen and (max-width: 600px) {
-        .social-links {
-            justify-content: center;  /* Ensure they are centered on mobile */
-            padding: 10px 0;  /* Add some space around the container */
-        }
-    
-        .social-links a {
-            font-size: 18px;  /* Make icon larger for mobile */
-            padding: 10px;  /* Increase padding for better spacing */
-        }
-    
-        .social-links a span {
-            display: none;  /* Hide the text on small screens */
-        }
-    }
-    
-    /* Hover Effect for Social Links */
-    .social-links a:hover {
-        color: #ffffff; /* White text on hover */
-        background-color: #000080; /* Windows blue background */
-        border-color: #ffffff; /* White border on hover */
-        box-shadow: 2px 2px 0 #000000, -2px -2px 0 #c0c0c0; /* Reverse 3D effect on hover */
-    }
-    
-    /* Adjust Icon Size */
-    .social-links i {
-        margin-right: 8px;
-        font-size: 20px;  /* Set a consistent icon size */
-    }
-    
-    /* Footer Section: Centering and Styling */
-    footer {
-        position: fixed;
-        bottom: 10px;
-        width: 100%;
-        background-color: #000000;
-        padding: 10px;
-        color: white;
-        text-align: center;
-    }
-    
+<!-- Social Media Section -->
+    <footer>
+        <p>Join us on social media:</p>
+        <ul class="social-links">
+            <li><a href="https://x.com/PupperPumpPup" target="_blank"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+            <li><a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i><span>Discord</span></a></li>
+            <li><a href="https://t.me/PupperPumpPup" target="_blank"><i class="fab fa-telegram"></i><span>Telegram</span></a></li>
+            <li><a href="https://www.linkedin.com/in/pupper-pup-868805339/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a></li>
+        </ul>
+    </footer>
+
+
+    <!-- Social Media Section -->
+    <section class="nft-section">
+        <p class="neon-text">Stay tuned for more!</p>
+    </section>
 
     <!-- FAQ Section -->
     <section class="faq">
