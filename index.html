@@ -13,6 +13,8 @@
 
 </head>
 
+<p class="play-notification">Click the 🎵 button to start the vibes!</p>
+
 <body>
     <!-- Background Music -->
     <audio autoplay loop>
@@ -33,6 +35,14 @@
         <img src="Assets/images/Images/9ayi54.gif" alt="Puppy image" />
     </div>
 </header>
+
+<div id="audio-control">
+    <button id="play-button" onclick="playAudio()">🎵 Play Background Music</button>
+</div>
+<audio id="background-music" loop>
+    <source src="Assets/images/Videos/Push_It_To_The_Limit.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
 
 
     <!-- Social Media Section -->
@@ -67,6 +77,8 @@
             <p>Yes! Join our community on Telegram to stay updated.</p>
         </div>
     </section>
+
+    
 
     <!-- DEX Screener Section -->
     <section class="dex-screener">

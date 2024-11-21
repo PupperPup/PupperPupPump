@@ -22,3 +22,30 @@ function updateTicker() {
 updateTicker();
 setInterval(updateTicker, 5000); // Updates every 5 seconds
 
+// Function to play audio after user interaction
+function playAudio() {
+    const audio = document.getElementById("background-music");
+    audio.play()
+        .then(() => {
+            document.getElementById("audio-control").style.display = "none"; // Hide the play button after audio starts
+        })
+        .catch((error) => {
+            console.error("Error playing audio:", error);
+        });
+}
+
+function playAudio() {
+    const audio = document.getElementById("background-music");
+    audio.play()
+        .then(() => {
+            document.getElementById("audio-control").style.display = "none";
+            localStorage.setItem("audioPlayed", "true");
+        })
+        .catch((error) => console.error("Error playing audio:", error));
+}
+
+// Auto-hide play button if the user has already interacted
+if (localStorage.getItem("audioPlayed") === "true") {
+    document.getElementById("audio-control").style.display = "none";
+    document.getElementById("background-music").play();
+}
