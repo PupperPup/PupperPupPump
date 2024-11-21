@@ -318,4 +318,103 @@ button:active {
     margin-top: 20px;
 }
 
+/* Puppy Pump Click Section - Windows 95 Style */
+.puppy-click-area {
+    cursor: pointer;
+    text-align: center;
+}
+
+.puppy-pump-gif {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.puppy-pump-gif:hover {
+    transform: scale(1.1); /* Makes the puppy gif grow on hover */
+}
+
+/* Counter Text - Windows 95 Style */
+#pump-counter-text {
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    color: #000080; /* Windows 95-style color (dark blue) */
+    margin-top: 10px;
+    text-shadow: none;
+}
+
+/* Title Bar for Puppy Pump Section - Windows 95 Style */
+.window .title-bar {
+    background-color: #000080;
+    color: white;
+    padding: 5px;
+    font-family: 'MS Sans Serif', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Window Body - Windows 95 Style */
+.window-body {
+    background-color: #ffffff;
+    padding: 15px;
+    color: black;
+    border-top: 2px solid #808080;
+    text-align: center;
+}
+
+/* Retro Button Style */
+.retro-button {
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    padding: 6px 12px;
+    font-family: 'Courier New', monospace;
+    color: black;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #ffffff;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.retro-button i {
+    font-size: 18px; /* Adjust icon size */
+}
+
+.retro-button span {
+    font-size: 14px;
+}
+
+.retro-button:active {
+    box-shadow: inset -1px -1px 0 #000, inset 1px 1px 0 #ffffff;
+}
+
+/* Hover Effect for Buttons - Windows 95 Style */
+.retro-button:hover {
+    background-color: #c0c0c0;
+    color: #000080; /* Dark blue text on hover */
+    text-decoration: none;
+}
+
+/* Puppy Image Container Styling */
+.puppy-click-area {
+    cursor: pointer;
+    text-align: center;
+}
+
+.puppy-pump-gif {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.puppy-pump-gif:hover {
+    transform: scale(1.1); /* Make the image grow on hover */
+}
+
 
