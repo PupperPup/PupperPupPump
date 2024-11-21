@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <!-- Pop-Up Window for Audio -->
+    <!-- Pop-Up Window -->
     <div class="window">
         <div class="title-bar">
             <div class="title-bar-text">Pupper Pump Pup</div>
@@ -25,54 +25,89 @@
         </div>
     </div>
 
-    <!-- Puppy Image and Description -->
-    <div class="window">
-        <div class="title-bar">
-            <div class="title-bar-text">Meet Our Puppy</div>
-        </div>
-        <div class="window-body">
-            <img src="Assets/images/puppy_image.jpg" alt="Puppy Image" class="puppy-img">
-            <p>Here’s our beloved mascot, the Pupper! Ready to lead the way to the moon. 🚀🐾</p>
-        </div>
-    </div>
-
-    <!-- Roadmap Section -->
-    <div class="windows-container">
-        <div class="window">
-            <div class="title-bar">
-                <div class="title-bar-text">Pupper Pump Pup Roadmap - Phase 1</div>
-            </div>
-            <div class="window-body">
-                <ul>
-                    <li>✔ Launch website and brand identity</li>
-                    <li>✔ Deploy token contract on the chosen blockchain (e.g., Solana)</li>
-                    <li>✔ Achieve 200+ holders</li>
-                    <li>✔ List token on DEXs (e.g., Solana DEX)</li>
-                    <li>✔ Begin community engagement (Telegram, Twitter, etc.)</li>
-                    <li>✔ Hold first meme contest</li>
-                    <li>✔ Achieve $100,000 in trading volume</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Add other roadmap phases similarly... -->
-
-    </div>
-
     <!-- Audio Section -->
     <audio id="background-music" loop>
         <source src="Assets/images/Videos/Music.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
-    <!-- Social Media Section -->
+    <!-- Header Section -->
+    <header>
+        <div class="ticker-container">
+            <div class="stock-ticker" id="random-ticker">
+                Loading...
+            </div>
+        </div>
+        <h1 class="neon-text title">Pupper Pump Pup</h1>
+        <p class="neon-text">Mr. Pup Pump started as a humble office pup but became the world’s top financial ‘bark’itect.</p>
+        <div class="hero-image">
+            <img src="Assets/images/Images/9ayi54.gif" alt="Puppy image" />
+        </div>
+    </header>
+
+    <!-- Wrapper for All Windows (Container) -->
+    <div class="windows-container">
+        <!-- FAQ Window -->
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">FAQs</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="faq-item">
+                    <h3>What is Pupper Pump Pup?</h3>
+                    <p>Pupper Pump Pup is a meme coin designed to bring fun.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I buy PUPUPU?</h3>
+                    <p>You can buy PUPUPU on pump.fun.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a telegram?</h3>
+                    <p>Yes! Join our community on Telegram to stay updated.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- DEX Screener Window -->
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Live DEX Screener</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="dex-placeholder">
+                    <p>DEX Screener Coming Soon!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Window -->
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">What is Pupper Pump Pup?</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>Pupper Pump Pup isn’t your average meme coin—it’s your ticket to the ultimate tail-wagging adventure. Our mascot, the unstoppable Pupper, doesn’t just sit or stay; he’s here to pump the vibes, pump the profits, and pump your spirits! Fueled by community love, and destined for greatness, Pupper Pump Pup is here to prove that sometimes, all you need is a little bark and a lot of bite. So, grab your leg warmers, join the dance floor, and let’s take this pup to the moon!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Section (Now Under the Image) -->
     <footer>
         <p>Join us on social media:</p>
         <ul class="social-links">
-            <li><a href="https://x.com/PupperPumpPup" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-            <li><a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i> Discord (Coming Soon)</a></li>
-            <li><a href="https://t.me/PupperPumpPup" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
-            <li><a href="https://www.linkedin.com/in/pupper-pup-868805339/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://x.com/PupperPumpPup" target="_blank"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+            <li><a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i><span>Discord</span></a></li>
+            <li><a href="https://t.me/PupperPumpPup" target="_blank"><i class="fab fa-telegram"></i><span>Telegram</span></a></li>
+            <li><a href="https://www.linkedin.com/in/pupper-pup-868805339/" target="_blank"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a></li>
         </ul>
     </footer>
 
