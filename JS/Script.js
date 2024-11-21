@@ -64,3 +64,36 @@ function closePopup() {
 if (!localStorage.getItem("audioPlayed")) {
     showAudioControlPopup();
 }
+
+// Function to handle the puppy pump click event
+function pumpThePup() {
+    let counter = localStorage.getItem('pumpCounter');
+    
+    // If no counter is found in localStorage, initialize it to 0
+    if (!counter) {
+        counter = 0;
+    }
+
+    // Increment the counter
+    counter++;
+
+    // Save the updated counter to localStorage
+    localStorage.setItem('pumpCounter', counter);
+
+    // Update the counter text on the page
+    document.getElementById('pump-counter').textContent = counter;
+
+    // Optional: Add an effect (you can make this more elaborate)
+    document.querySelector('.puppy-pump-gif').classList.add('pumped');
+    setTimeout(() => {
+        document.querySelector('.puppy-pump-gif').classList.remove('pumped');
+    }, 500);  // Reset animation after 500ms
+}
+
+// On page load, check if the pump counter exists in localStorage
+window.onload = function() {
+    let counter = localStorage.getItem('pumpCounter');
+    if (counter) {
+        document.getElementById('pump-counter').textContent = counter;
+    }
+};
