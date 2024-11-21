@@ -20,29 +20,38 @@
 </div>
 
 <body>
-    <!-- Pop-Up Window -->
-    <div class="window">
-        <div class="title-bar">
-            <div class="title-bar-text">Pupper Pump Pup</div>
-            <div class="title-bar-controls">
-                <button aria-label="Close"></button>
+    <!-- Parent Container for Two Windows -->
+    <div class="windows-container">
+        <!-- Pop-Up Window (Music) -->
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Pupper Pump Pup</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
             </div>
-        </div>
-        <div class="window-body">
-            <p>Welcome to Pupper Pump Pup!</p>
-            <button class="retro-button" onclick="playAudio()">🎵 Play Background Music</button>
+            <div class="window-body">
+                <p>Welcome to Pupper Pump Pup!</p>
+                <button class="retro-button" onclick="playAudio()">🎵 Play Background Music</button>
+            </div>
         </div>
 
-        <div class="title-bar">
-            <div class="title-bar-text">Puppy Pump Counter</div>
-    </div>
-        <div class="window-body">
-            <div class="puppy-click-area" onclick="pumpThePup()">
-                <img src="Assets/images/ezgif.com-speed(1).gif" alt="Puppy Pump" class="puppy-pump-gif">
+        <!-- Puppy Pump Counter Window -->
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Puppy Pump Counter</div>
             </div>
-            <p id="pump-counter-text">You pumped the pup <span id="pump-counter">0</span> times!</p>
+            <div class="window-body">
+                <div class="puppy-click-area" onclick="pumpThePup()">
+                    <img src="Assets/images/ezgif.com-speed(1).gif" alt="Puppy Pump" class="puppy-pump-gif">
+                </div>
+                <p id="pump-counter-text">You pumped the pup <span id="pump-counter">0</span> times!</p>
+            </div>
+        </div>
     </div>
-    </div>
+
+    <script src="JS/Script.js"></script>
+</body>
 
 
 
