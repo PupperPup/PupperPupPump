@@ -21,6 +21,7 @@ header {
     overflow: hidden;
     background-color: #000;
     padding: 10px;
+    border-bottom: 2px solid #39FF14; /* Optional for styling */
 }
 
 .stock-ticker {
@@ -36,6 +37,14 @@ header {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
 }
+
+.hero-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 
 .neon-text {
     color: #39FF14; /* Neon green */
