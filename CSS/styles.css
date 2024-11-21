@@ -1,25 +1,21 @@
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Wrapper for all windows */
+.windows-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of windows */
+    justify-content: center; /* Center windows horizontally */
+    gap: 20px; /* Space between windows */
+    padding: 20px;
 }
 
-body {
-    font-family: 'Courier New', monospace;
-    background-color: #008080; /* Classic teal background */
-    color: black;
-    text-align: center;
-    padding: 40px;
-}
-
-/* Window-like Structure */
+/* General Window Styling */
 .window {
-    width: 400px;
-    border: 2px solid #000000;
+    width: 400px; /* Fixed width */
     background-color: #c0c0c0;
-    box-shadow: 4px 4px 0 #000000; /* Shadow for "window" effect */
-    margin: 20px auto;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 20px; /* Space at the bottom between windows */
 }
 
 /* Title Bar */
@@ -34,12 +30,12 @@ body {
     font-weight: bold;
 }
 
-/* Title Bar Text */
+/* Title Text */
 .title-bar-text {
     font-size: 14px;
 }
 
-/* Window Controls (Buttons) */
+/* Close Button */
 .title-bar-controls button {
     width: 16px;
     height: 16px;
@@ -50,19 +46,26 @@ body {
 }
 
 .title-bar-controls button:active {
-    box-shadow: inset 1px 1px 0 #000000, inset -1px -1px 0 #ffffff;
+    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #ffffff;
 }
 
 /* Window Body */
 .window-body {
-    padding: 20px;
     background-color: #ffffff;
     font-size: 14px;
+    padding: 15px;
     color: black;
     border-top: 2px solid #808080;
+    overflow-y: auto; /* Enable scrolling for large content */
+    height: 200px; /* Fixed height for consistent window size */
 }
 
-/* Retro Button */
+/* Scrollable content */
+.window-body p, .window-body .faq-item {
+    margin-bottom: 15px;
+}
+
+/* Retro Button Style */
 .retro-button {
     background-color: #c0c0c0;
     border: 2px solid #808080;
@@ -77,74 +80,55 @@ body {
     box-shadow: inset -1px -1px 0 #000, inset 1px 1px 0 #ffffff;
 }
 
-/* Social Links Section */
-.social-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;  /* Center the links */
-    gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    padding: 0;  /* Ensure no extra padding or margin */
-    text-align: center;  /* Ensure text is centered */
-}
-
-/* Social Link Style */
-.social-links a {
-    font-family: 'Courier New', monospace; /* Retro font */
-    font-size: 16px;
-    text-decoration: none;
-    color: #000080; /* Classic Windows blue */
-    padding: 4px 8px;
-    border: 2px solid #808080; /* 3D button look */
-    background-color: #c0c0c0; /* Light gray background */
-    border-radius: 5px;
-    box-shadow: 2px 2px 0 #808080, -2px -2px 0 #ffffff; /* 3D effect */
-    transition: all 0.3s ease; /* Smooth transition on hover */
-    display: flex;  /* Ensure both icon and text are aligned */
-    align-items: center;
-}
-
 /* Mobile-Specific Adjustments */
 @media screen and (max-width: 600px) {
-    .social-links {
-        justify-content: center;  /* Ensure they are centered on mobile */
-        padding: 10px 0;  /* Add some space around the container */
+    .window {
+        width: 100%; /* Make each window full-width on mobile */
     }
 
-    .social-links a {
-        font-size: 18px;  /* Make icon larger for mobile */
-        padding: 10px;  /* Increase padding for better spacing */
+    /* Ensuring proper spacing between stacked windows on mobile */
+    .windows-container {
+        flex-direction: column; /* Stack windows vertically on small screens */
     }
 
-    .social-links a span {
-        display: none;  /* Hide the text on small screens */
+    .window-body {
+        height: auto; /* Remove fixed height on mobile for flexibility */
     }
 }
 
-/* Hover Effect for Social Links */
+/* Social Links Under Each Window */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #000080;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 4px 8px;
+    border: 2px solid #808080;
+    background-color: #c0c0c0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 #808080, -2px -2px 0 #ffffff;
+}
+
 .social-links a:hover {
-    color: #ffffff; /* White text on hover */
-    background-color: #000080; /* Windows blue background */
-    border-color: #ffffff; /* White border on hover */
-    box-shadow: 2px 2px 0 #000000, -2px -2px 0 #c0c0c0; /* Reverse 3D effect on hover */
-}
-
-/* Adjust Icon Size */
-.social-links i {
-    margin-right: 8px;
-    font-size: 20px;  /* Set a consistent icon size */
+    color: #ffffff;
+    background-color: #000080;
+    border-color: #ffffff;
+    box-shadow: 2px 2px 0 #000000, -2px -2px 0 #c0c0c0;
 }
 
 /* Footer Section: Centering and Styling */
 footer {
-    position: fixed;
-    bottom: 10px;
     width: 100%;
-    background-color: #000000;
-    padding: 10px;
-    color: white;
+    padding: 20px 0;
     text-align: center;
+    background-color: #000000;
+    color: white;
 }
 
 
