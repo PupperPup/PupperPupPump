@@ -3,9 +3,6 @@ const messages = [
     "🚀 Meme Coin Price: $100 | Join the revolution! 🚀",
     "🔥 Pupper Pump Pup to the Moon! 🌕",
     "💰 $PUPUPU is trending now! 💎",
-    "🐾 Meme Coins are the future. Get in today! 🚀",
-    "📈 Next stop: Meme Coin Milestone at $500k! 🚀",
-    "🌟 Voting for the next charity is live now! 🐕",
     "💡 Discover the power of $PUPUPU! Network like never before. 💼",
 ];
 
@@ -18,7 +15,7 @@ function updateTicker() {
 
 // Set the initial message and update it every 5 seconds
 updateTicker();
-setInterval(updateTicker, 5000); // Updates every 5 seconds
+setInterval(updateTicker, 20000); // Updates every 5 seconds
 
 // Function to play audio after user interaction (Windows 95 style)
 function playAudio() {
