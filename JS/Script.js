@@ -1,14 +1,24 @@
 // script.js
 
-document.addEventListener('DOMContentLoaded', () => {
-    const ticker = document.querySelector('.stock-ticker');
-    let price = 100; // Initial price
+// Array of random messages for the ticker
+const messages = [
+    "🚀 Meme Coin Price: $100 | Join the revolution! 🚀",
+    "🔥 Pupper Pump Pup to the Moon! 🌕",
+    "💰 $PUPUPU is trending now! 💎",
+    "🐾 Meme Coins are the future. Get in today! 🚀",
+    "📈 Next stop: Meme Coin Milestone at $500k! 🚀",
+    "🌟 Voting for the next charity is live now! 🐕",
+    "💡 Discover the power of $PUPUPU! Network like never before. 💼",
+];
 
-    // Set initial ticker content immediately
-    ticker.textContent = `🚀 Meme Coin Price: $${price} | Join the revolution! | 🚀`;
+// Function to update the ticker content randomly
+function updateTicker() {
+    const ticker = document.getElementById("random-ticker");
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    ticker.textContent = messages[randomIndex];
+}
 
-    setInterval(() => {
-        price += 1; // Increment price by 1 every interval
-        ticker.textContent = `🚀 Meme Coin Price: $${price} | Join the revolution! | 🚀`;
-    }, 100); // Update price every 100 milliseconds
-});
+// Set the initial message and update it every 5 seconds
+updateTicker();
+setInterval(updateTicker, 5000); // Updates every 5 seconds
+
