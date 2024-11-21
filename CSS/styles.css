@@ -12,8 +12,8 @@ body {
     color: black;
     text-align: center;
     padding: 40px;
-    background-image: url('Assets/images/your-image.jpg'); /* Add your background image here */
-    background-size: cover; /* Make the background cover the whole screen */
+    background-image: url('Assets/images/your-image.jpg'); /* Background image */
+    background-size: cover; /* Make background cover the whole screen */
     background-position: center; /* Center the background image */
 }
 
@@ -26,6 +26,7 @@ body {
     box-shadow: 4px 4px 0 #000;
     padding: 10px;
     font-family: 'Courier New', monospace;
+    margin-bottom: 20px; /* Space between windows */
 }
 
 /* Title Bar */
@@ -90,94 +91,36 @@ body {
     box-shadow: inset -1px -1px 0 #000, inset 1px 1px 0 #ffffff;
 }
 
-/* Social Links Under Each Window */
+/* Social Links */
 .social-links {
+    list-style: none;
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px;
-    list-style: none;
+    margin-top: 30px;
 }
 
 .social-links a {
-    color: #000080;
-    font-size: 16px;
+    color: #39FF14;
     text-decoration: none;
-    padding: 4px 8px;
-    border: 2px solid #808080;
-    background-color: #c0c0c0;
-    border-radius: 5px;
-    box-shadow: 2px 2px 0 #808080, -2px -2px 0 #ffffff;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
 }
 
 .social-links a:hover {
     color: #ffffff;
-    background-color: #000080;
-    border-color: #ffffff;
-    box-shadow: 2px 2px 0 #000000, -2px -2px 0 #c0c0c0;
+    text-decoration: underline;
 }
 
-/* Footer Section */
+/* Footer */
 footer {
+    position: fixed;
+    bottom: 10px;
     width: 100%;
-    padding: 20px 0;
-    text-align: center;
     background-color: #000000;
+    padding: 10px;
     color: white;
-}
-
-/* Wrapper for All Windows */
-.windows-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Mobile-Specific Adjustments */
-@media screen and (max-width: 600px) {
-    /* Stack windows vertically */
-    .windows-container {
-        flex-direction: column;
-    }
-
-    .window {
-        width: 100%; /* Make each window full-width on mobile */
-    }
-
-    .window-body {
-        height: auto; /* Remove fixed height on mobile for flexibility */
-    }
-
-    /* Adjust the social links layout */
-    .social-links {
-        flex-direction: column;
-    }
-}
-
-/* Ticker Section */
-.ticker-container {
-    width: 100%;
-    overflow: hidden;
-    background-color: #000;  /* Black background for better contrast */
-    padding: 10px 0;
     text-align: center;
-    font-size: 3rem;  /* Make the font larger */
-    color: #fff;  /* White text for contrast */
-    font-family: 'Roboto', sans-serif;
-}
-
-.stock-ticker {
-    display: inline-block;
-    white-space: nowrap;
-    font-weight: bold;
-    animation: scrollText 30s linear infinite;  /* Slowed down the animation speed */
-}
-
-@keyframes scrollText {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
 }
 
 /* Audio Play Button */
@@ -193,7 +136,7 @@ footer {
     box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #ffffff;
 }
 
-/* Pop-Up for Audio */
+/* General Window Styles */
 .audio-popup {
     position: fixed;
     top: 50%;
@@ -208,6 +151,7 @@ footer {
     z-index: 9999; /* Ensure it appears above all other content */
 }
 
+/* Title Bar for Audio Popup */
 .popup-title-bar {
     background-color: #000080;
     color: white;
@@ -218,6 +162,7 @@ footer {
     font-weight: bold;
 }
 
+/* Close Button for Audio Popup */
 .popup-title-bar button {
     width: 16px;
     height: 16px;
@@ -230,6 +175,7 @@ footer {
     box-shadow: inset 1px 1px 0 #000000, inset -1px -1px 0 #ffffff;
 }
 
+/* Popup Body */
 .popup-body {
     background-color: #ffffff;
     padding: 10px;
@@ -238,3 +184,45 @@ footer {
     border-top: 2px solid #808080;
 }
 
+/* Button Style */
+button {
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+}
+
+button:active {
+    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #ffffff;
+}
+
+/* Responsive Layout for Windows */
+.windows-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.window {
+    width: 45%;
+    margin: 10px;
+}
+
+/* Mobile-Responsive Design */
+@media (max-width: 768px) {
+    .window {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer {
+        position: relative;
+        bottom: initial;
+    }
+}
