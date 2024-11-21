@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,276 +6,181 @@
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
-    background: linear-gradient(45deg, #0a0a0a, #2a2a2a);
+    font-family: 'Courier New', monospace;
+    background-color: #008080; /* Classic teal background */
+    color: black;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Window-like Structure */
+.window {
+    width: 400px;
+    border: 2px solid #000000;
+    background-color: #c0c0c0;
+    box-shadow: 4px 4px 0 #000000; /* Shadow for "window" effect */
+    margin: 20px auto;
+}
+
+/* Title Bar */
+.title-bar {
+    background-color: #000080;
     color: white;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-}
-
-.ticker-container {
-    width: 100%;
-    overflow: hidden;
-    background-color: #000;
-    padding: 10px;
-    border-bottom: 2px solid #39FF14; /* Optional for styling */
-}
-
-.stock-ticker {
-    display: inline-block;
-    white-space: nowrap;
-    color: #39FF14; /* Neon green */
-    font-family: 'Bank Gothic', sans-serif;
-    font-size: 18px;
-    animation: scrollText 20s linear infinite;
-}
-
-@keyframes scrollText {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
-.hero-image img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-
-.neon-text {
-    color: #39FF14; /* Neon green */
-    text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14;
-    font-family: 'Bank Gothic', sans-serif;
-    font-size: 3em;
-}
-
-.about {
-    padding: 50px 20px;
-    text-align: center;
-    background: linear-gradient(45deg, #003366, #000000);
-}
-
-.about h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.neon-btn {
-    padding: 10px 20px;
-    font-size: 1.5em;
-    background: none;
-    border: 2px solid #39FF14;
-    color: #39FF14;
-    font-family: 'Bank Gothic', sans-serif;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-}
-
-.neon-btn:hover {
-    background: #39FF14;
-    color: #000000;
-    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
-}
-
-footer {
-    padding: 20px;
-    background-color: #111;
-    text-align: center;
-}
-
-footer a {
-    color: #39FF14;
-    text-decoration: none;
-    margin: 10px;
-}
-
-footer a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-/* Image Section */
-.image-section {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.image-section h2 {
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.image-gallery {
+    padding: 5px;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.image-gallery img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.image-gallery img:hover {
-    transform: scale(1.1);
-}
-
-/* Dance Party Section */
-.dance-party {
-    text-align: center;
-    margin-top: 50px;
-    padding: 30px;
-    background-color: #222;
-    border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-.dance-party h2 {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.dance-container {
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    animation: danceAnimation 1s ease-in-out infinite alternate;
+    font-family: 'MS Sans Serif', sans-serif;
+    font-weight: bold;
 }
 
-.dancing-dog {
-    width: 300px;
-    height: auto;
-    animation: bounce 0.8s ease-in-out infinite;
+/* Title Bar Text */
+.title-bar-text {
+    font-size: 14px;
 }
 
-@keyframes danceAnimation {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
+/* Window Controls (Buttons) */
+.title-bar-controls button {
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border: 1px solid #808080;
+    margin: 0 2px;
+    cursor: pointer;
 }
 
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
+.title-bar-controls button:active {
+    box-shadow: inset 1px 1px 0 #000000, inset -1px -1px 0 #ffffff;
 }
 
-/* NFT Section Styles */
-.nft-section {
-    background-color: #111;
-    padding: 50px;
-    text-align: center;
-    border-top: 3px solid #00ff00;
-    border-bottom: 3px solid #00ff00;
+/* Window Body */
+.window-body {
+    padding: 20px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: black;
+    border-top: 2px solid #808080;
 }
 
-.image-gallery {
+/* Retro Button */
+.retro-button {
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    padding: 4px 10px;
+    font-family: 'Courier New', monospace;
+    color: black;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #ffffff;
+}
+
+.retro-button:active {
+    box-shadow: inset -1px -1px 0 #000, inset 1px 1px 0 #ffffff;
+}
+
+/* Social Links */
+.social-links {
+    list-style: none;
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.nft-card {
-    background-color: #000;
-    border: 2px solid #00ff00;
-    border-radius: 8px;
-    padding: 10px;
-    max-width: 200px;
-    text-align: center;
-    box-shadow: 0 0 10px #00ff00;
-}
-
-.nft-card img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.nft-caption {
-    font-family: 'Press Start 2P', cursive;
-    color: #ff00ff;
-    font-size: 14px;
-    margin: 0;
-    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
-}
-
-/* Social Links Styles */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
     margin-top: 30px;
-    list-style: none;
 }
 
-.social-links li a {
+.social-links a {
     color: #39FF14;
-    font-size: 1.5rem;
     text-decoration: none;
-    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
 }
 
-.social-links li a:hover {
-    color: #fff;
+.social-links a:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
-/* Dex Screener Placeholder */
-.dex-screener {
-    margin: 50px 0;
-    text-align: center;
-}
-
-.dex-screener .dex-placeholder {
-    background-color: #222;
-    padding: 30px;
-    color: #fff;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.ticker-container {
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 10px;
     width: 100%;
-    overflow: hidden;
-    background-color: #000;  /* Black background for better contrast */
-    padding: 10px 0;
+    background-color: #000000;
+    padding: 10px;
+    color: white;
     text-align: center;
-    font-size: 3rem;  /* Make the font larger */
-    color: #fff;  /* White text for contrast */
-    font-family: 'Roboto', sans-serif; /* Change to a more readable font */
 }
 
-.stock-ticker {
-    display: inline-block;
-    white-space: nowrap;
+/* Audio Play Button */
+#play-button {
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    padding: 4px 10px;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+}
+
+#play-button:active {
+    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #ffffff;
+}
+/* General Window Styles */
+.audio-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #c0c0c0;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0 #000000;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    z-index: 9999; /* Ensure it appears above all other content */
+}
+
+/* Title Bar */
+.popup-title-bar {
+    background-color: #000080;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-weight: bold;
-    animation: scrollText 30s linear infinite;  /* Slowed down the animation speed */
 }
 
-@keyframes scrollText {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+/* Close Button */
+.popup-title-bar button {
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border: 1px solid #808080;
+    cursor: pointer;
 }
+
+.popup-title-bar button:active {
+    box-shadow: inset 1px 1px 0 #000000, inset -1px -1px 0 #ffffff;
+}
+
+/* Popup Body */
+.popup-body {
+    background-color: #ffffff;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-top: 2px solid #808080;
+}
+
+/* Button Style */
+button {
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+}
+
+button:active {
+    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #ffffff;
+}
+
 
 

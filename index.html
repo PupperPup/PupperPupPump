@@ -5,45 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pupper Pump Pup</title>
-
-    <!-- External Resources -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bank+Gothic&family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pupperpumppup.org/CSS/styles.css"> <!-- Make sure your 'css' folder and 'styles.css' are correctly named -->
-
+    <link href="https://fonts.googleapis.com/css2?family=Courier+New&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
-<p class="play-notification">Click the 🎵 button to start the vibes!</p>
-
 <body>
-    <!-- Background Music -->
-    <audio autoplay loop>
-    <source src="Assets/images/Videos/Music.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-</audio>
-
-<!-- Header Section -->
-<header>
-    <div class="ticker-container">
-        <div class="stock-ticker" id="random-ticker">
-            Loading...
+    <!-- Pop-Up Window -->
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Pupper Pump Pup</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <p>Welcome to Pupper Pump Pup! Your ultimate meme coin destination. 🐾💰</p>
+            <button class="retro-button" onclick="playAudio()">🎵 Play Background Music</button>
         </div>
     </div>
-    <h1 class="neon-text title">Pupper Pump Pup</h1>
-    <p class="neon-text">Mr. Pup Pump started as a humble office pup but became the world’s top financial ‘bark’itect.</p>
-    <div class="hero-image">
-        <img src="Assets/images/Images/9ayi54.gif" alt="Puppy image" />
-    </div>
-</header>
 
-<div id="audio-control">
-    <button id="play-button" onclick="playAudio()">🎵 Play Background Music</button>
-</div>
-<audio id="background-music" loop>
-    <source src="Assets/images/Videos/Music.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-</audio>
-
+    <!-- Audio Section -->
+    <audio id="background-music" loop>
+        <source src="Assets/images/Videos/Music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
     <!-- Social Media Section -->
     <footer>
@@ -56,48 +42,11 @@
         </ul>
     </footer>
 
-    <!-- NFT Section -->
-    <section class="nft-section">
-        <p class="neon-text">Stay tuned for more!</p>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-        <h2 class="neon-text">FAQs</h2>
-        <div class="faq-item">
-            <h3>What is Pupper Pump Pup?</h3>
-            <p>Pupper Pump Pup is a meme coin designed to bring fun.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How do I buy PUPUPU?</h3>
-            <p>You can buy PUPUPU on pump.fun.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Is there a telegram?</h3>
-            <p>Yes! Join our community on Telegram to stay updated.</p>
-        </div>
-    </section>
-
-    
-
-    <!-- DEX Screener Section -->
-    <section class="dex-screener">
-        <h2 class="neon-text">Live DEX Screener</h2>
-        <div class="dex-placeholder">
-            <p>DEX Screener Coming Soon!</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about">
-        <h2 class="neon-text">What is Pupper Pump Pup?</h2>
-        <p>Pupper Pump Pup isn’t your average meme coin—it’s your ticket to the ultimate tail-wagging adventure. Our mascot, the unstoppable Pupper, doesn’t just sit or stay; he’s here to pump the vibes, pump the profits, and pump your spirits! Fueled by community love, and destined for greatness, Pupper Pump Pup is here to prove that sometimes, all you need is a little bark and a lot of bite. So, grab your leg warmers, join the dance floor, and let’s take this pup to the moon!</p>
-    </section>
-
     <script src="JS/Script.js"></script>
 </body>
 
 </html>
+
 
 
 
