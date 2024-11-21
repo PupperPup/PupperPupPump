@@ -51,7 +51,7 @@ function showAudioControlPopup() {
         </div>
         <div class="popup-body">
             <p>Click below to start the music:</p>
-            <button onclick="playAudio()">Play Music</button>
+            <button class="retro-button" onclick="playAudio()">Play Music</button>
         </div>
     `;
     document.body.appendChild(popup);
@@ -67,4 +67,3 @@ function closePopup() {
 if (!localStorage.getItem("audioPlayed")) {
     showAudioControlPopup();
 }
-
