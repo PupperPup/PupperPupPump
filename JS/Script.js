@@ -13,9 +13,9 @@ function updateTicker() {
     ticker.textContent = messages[randomIndex];
 }
 
-// Set the initial message and update it every 5 seconds
+// Set the initial message and update it every x seconds
 updateTicker();
-setInterval(updateTicker, 20000); // Updates every 5 seconds
+setInterval(updateTicker, 200000); // Updates every x seconds
 
 // Function to play audio after user interaction (Windows 95 style)
 function playAudio() {
