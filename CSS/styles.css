@@ -11,26 +11,27 @@ body {
     background-color: #008080; /* Classic teal background */
     color: black;
     text-align: center;
-    padding: 40px;
+    padding: 20px;
 }
 
-/* Container for the two windows */
+/* Container for Windows */
 .windows-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px; /* Space between the two windows */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap; /* Allow windows to wrap on smaller screens */
+    justify-content: center; /* Center align windows */
+    gap: 20px; /* Space between windows */
+    margin: 20px 0;
 }
 
 /* Window-like Structure */
 .window {
-    width: 45%; /* Make each window take up 45% of the container width */
+    width: 100%; /* Full width for smaller screens */
+    max-width: 400px; /* Limit the max width */
     background-color: #c0c0c0;
     border: 2px solid #000;
     box-shadow: 4px 4px 0 #000;
-    padding: 10px;
     font-family: 'Courier New', monospace;
-    margin-bottom: 20px;
+    margin: 10px auto; /* Center align on smaller screens */
 }
 
 /* Title Bar for each Window */
@@ -73,39 +74,7 @@ body {
     text-align: center;
 }
 
-/* Retro Button Style */
-.retro-button {
-    background-color: #c0c0c0;
-    border: 2px solid #808080;
-    padding: 6px 12px;
-    font-family: 'Courier New', monospace;
-    color: black;
-    cursor: pointer;
-    box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #ffffff;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.retro-button i {
-    font-size: 18px;
-}
-
-.retro-button span {
-    font-size: 14px;
-}
-
-.retro-button:active {
-    box-shadow: inset -1px -1px 0 #000, inset 1px 1px 0 #ffffff;
-}
-
-/* Hover Effect for Buttons */
-.retro-button:hover {
-    background-color: #c0c0c0;
-    color: #000080; /* Dark blue text on hover */
-}
-
-/* Puppy Pump Image Section */
+/* Puppy Pump Section */
 .puppy-click-area {
     cursor: pointer;
     text-align: center;
@@ -120,7 +89,12 @@ body {
 }
 
 .puppy-pump-gif:hover {
-    transform: scale(1.1); /* Makes the puppy gif grow on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Remove zoom effect on click */
+.puppy-click-area:active .puppy-pump-gif {
+    transform: none; /* No zoom-in or zoom-out effect on click */
 }
 
 /* Counter Text */
@@ -129,25 +103,20 @@ body {
     font-size: 1.2rem;
     color: #000080; /* Windows 95-style dark blue */
     margin-top: 10px;
-    text-shadow: none;
 }
 
 /* Social Links Styling */
 .social-links {
-    display: flex; /* Arrange links in a row */
-    justify-content: flex-start; /* Align items to the start (no unnecessary stretching) */
+    display: flex;
+    justify-content: center; /* Center-align for larger screens */
     gap: 15px; /* Space between links */
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    padding: 10px 0;
-    margin: 0 auto; /* Center align the section */
-    max-width: 300px; /* Limit the total width of the social links container */
-    text-align: center;
+    margin: 10px 0;
 }
 
 .social-links a {
-    display: inline-flex; /* Prevent stretching of buttons */
-    align-items: center; /* Center-align icon and text vertically */
-    justify-content: center; /* Center-align icon and text horizontally */
+    display: inline-flex; /* Icon and text alignment */
+    align-items: center; /* Center-align content */
     text-decoration: none;
     background-color: #c0c0c0; /* Windows 95 button color */
     border: 2px solid #808080;
@@ -158,8 +127,8 @@ body {
     border-radius: 4px;
     box-shadow: inset 1px 1px 0 #000, inset -1px -1px 0 #fff;
     transition: background-color 0.3s ease;
-    width: auto; /* Keep width auto unless adjusted for mobile */
-    height: 40px; /* Consistent button height */
+    height: 40px;
+    width: 120px;
 }
 
 .social-links a:hover {
@@ -168,14 +137,19 @@ body {
 }
 
 .social-links i {
-    margin-right: 5px; /* Space between icon and text */
+    margin-right: 5px;
     font-size: 18px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .windows-container {
+        flex-direction: column; /* Stack windows vertically */
+        align-items: center; /* Center align stacked windows */
+    }
+
     .social-links {
-        justify-content: center; /* Center-align for smaller screens */
+        justify-content: center;
     }
 
     .social-links a {
@@ -184,20 +158,24 @@ body {
         padding: 0;
     }
 
-    .social-links a span {
-        display: none; /* Hide text */
+    .social-links span {
+        display: none; /* Hide text for mobile layout */
     }
 
     .social-links i {
-        margin-right: 0; /* No space for icons-only layout */
+        margin-right: 0; /* Icon-only layout */
     }
 }
 
-/* Fix for Other Boxes Stretching */
-.window-body {
-    padding: 10px;
-    max-width: 400px; /* Limit width */
-    margin: 0 auto; /* Center align the content */
-    text-align: left; /* Align text */
+/* Fix White Boxes Stretching */
+.window {
+    max-width: 400px; /* Ensure windows don't stretch unnecessarily */
+    margin: 10px auto;
 }
 
+.window-body {
+    padding: 10px;
+    max-width: 380px;
+    margin: 0 auto; /* Center align content inside window */
+    text-align: left;
+}

@@ -10,40 +10,50 @@
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
-<div class="window-body">
-    <h1 class="title-bar-text">Pupper Pump Pup</h1>
-    <p class="faq-item">Mr. Pup Pump started as a humble office pup but became the world’s top financial ‘bark’itect.</p>
-    <p class="faq-item">4LmV7HEKBNTX46N83tGu37QmVqKi6QUyUcXVBHripump</p>
-    <div class="hero-image">
-        <img src="Assets/images/Images/9ayi54.gif" alt="Puppy image" />
-    </div>
-    <div class="social-links">
-        <a href="https://x.com/PupperPumpPup" target="_blank">
-            <i class="fab fa-twitter"></i>
-            <span>Twitter</span>
-        </a>
-        <a href="https://discord.com" target="_blank">
-            <i class="fab fa-discord"></i>
-            <span>Discord</span>
-        </a>
-        <a href="https://t.me/PupperPumpPup" target="_blank">
-            <i class="fab fa-telegram"></i>
-            <span>Telegram</span>
-        </a>
-        <a href="https://www.linkedin.com/in/pupper-pup-868805339/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-            <span>LinkedIn</span>
-        </a>
-    </div>
-</div>
-
 <body>
-    <!-w- Parent Container for Two Windows -->
-    <div class="windows-container">
-        <!-- Pop-Up Window (Music) -->
+    <!-- Main Container for All Content -->
+    <div class="main-container">
+
+        <!-- Hero Section -->
         <div class="window">
             <div class="title-bar">
                 <div class="title-bar-text">Pupper Pump Pup</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <h1>Pupper Pump Pup</h1>
+                <p>Mr. Pup Pump started as a humble office pup but became the world’s top financial ‘bark’itect.</p>
+                <p>4LmV7HEKBNTX46N83tGu37QmVqKi6QUyUcXVBHripump</p>
+                <div class="hero-image">
+                    <img src="Assets/images/Images/9ayi54.gif" alt="Puppy image" />
+                </div>
+                <div class="social-links">
+                    <a href="https://x.com/PupperPumpPup" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="https://discord.com" target="_blank">
+                        <i class="fab fa-discord"></i>
+                        <span>Discord</span>
+                    </a>
+                    <a href="https://t.me/PupperPumpPup" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pupper-pup-868805339/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Music Player Window -->
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Music Player</div>
                 <div class="title-bar-controls">
                     <button aria-label="Close"></button>
                 </div>
@@ -54,10 +64,13 @@
             </div>
         </div>
 
-        <!-- Puppy Pump Counter Window -->
+        <!-- Puppy Pump Counter -->
         <div class="window">
             <div class="title-bar">
                 <div class="title-bar-text">Puppy Pump Counter</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
             </div>
             <div class="window-body">
                 <div class="puppy-click-area" onclick="pumpThePup()">
@@ -66,23 +79,7 @@
                 <p id="pump-counter-text">You pumped the pup <span id="pump-counter">0</span> times!</p>
             </div>
         </div>
-    </div>
 
-    <script src="JS/Script.js"></script>
-</body>
-
-
-
-
-    <!-- Audio Section -->
-    <audio id="background-music" loop>
-        <source src="Assets/images/Videos/Music.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-    
-
-    <!-- Wrapper for All Windows (Container) -->
-    <div class="windows-container">
         <!-- FAQ Window -->
         <div class="window">
             <div class="title-bar">
@@ -107,22 +104,7 @@
             </div>
         </div>
 
-        <!-- DEX Screener Window -->
-        <div class="window">
-            <div class="title-bar">
-                <div class="title-bar-text">Live DEX Screener</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Close"></button>
-                </div>
-            </div>
-            <div class="window-body">
-                <div class="dex-placeholder">
-                    <p>DEX Screener Coming Soon!</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Roadmap -->
+        <!-- Roadmap Window -->
         <div class="window">
             <div class="title-bar">
                 <div class="title-bar-text">Roadmap</div>
@@ -131,17 +113,14 @@
                 </div>
             </div>
             <div class="window-body">
-                <div class="dex-placeholder">
-                    <h3>Phase 1: Initial Launch & Community Building</h3>
-                    <ul>
-                        <li>✔ Launch website</li>
-                        <li>🔜 Launch meme coin on decentralized exchanges</li>
-                        <li>🔜 Achieve 200 holders</li>
-                        <li>🔜 Start community engagement (social media, forums)</li>
-                        <li>🔜 Begin charitable voting system</li>
-    </ul>
-
-                </div>
+                <h3>Phase 1: Initial Launch & Community Building</h3>
+                <ul>
+                    <li>✔ Launch website</li>
+                    <li>🔜 Launch meme coin on decentralized exchanges</li>
+                    <li>🔜 Achieve 200 holders</li>
+                    <li>🔜 Start community engagement (social media, forums)</li>
+                    <li>🔜 Begin charitable voting system</li>
+                </ul>
             </div>
         </div>
 
@@ -157,11 +136,17 @@
                 <p>Pupper Pump Pup isn’t your average meme coin—it’s your ticket to the ultimate tail-wagging adventure. Our mascot, the unstoppable Pupper, doesn’t just sit or stay; he’s here to pump the vibes, pump the profits, and pump your spirits! Fueled by community love, and destined for greatness, Pupper Pump Pup is here to prove that sometimes, all you need is a little bark and a lot of bite. So, grab your leg warmers, join the dance floor, and let’s take this pup to the moon!</p>
             </div>
         </div>
+
     </div>
 
+    <!-- Audio Section -->
+    <audio id="background-music" loop>
+        <source src="Assets/images/Videos/Music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
+    <!-- JavaScript -->
     <script src="JS/Script.js"></script>
 </body>
 
 </html>
-
